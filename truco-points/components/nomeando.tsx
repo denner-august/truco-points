@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, StyleSheet, TextInput } from "react-native";
 
 export function Nomeando() {
 
@@ -8,14 +8,13 @@ export function Nomeando() {
 
     return (
         <View style={styles.Container}>
-
-
             <View>
-                <TextInput value={JogadorA} onChangeText={(value) => setJogadorA(value)} style={styles.input} />
+                <TextInput value={JogadorA} onChangeText={(value) => setJogadorA(value)} style={styles.input} placeholder="Jogador-A" placeholderTextColor="#8d8c8c" />
             </View>
 
             <View>
-                <TextInput value={jogadorB} onChangeText={(value) => setJogadorB(value)} style={styles.input} />
+                <TextInput value={jogadorB} onChangeText={(value) => setJogadorB(value)} style={styles.input}
+                    placeholder="Jogador-B" placeholderTextColor="#8d8c8c" />
             </View>
         </View>
     )
