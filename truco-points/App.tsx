@@ -1,45 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { Nomeando } from './components/nomeando';
-
+import { StyleSheet, View } from 'react-native';
+import { StackRouter } from './router/stack_router'
 
 export default function App() {
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.ContainerTitulo}>
-        <Text style={styles.titulo}>Nome dos Jogadores</Text>
-      </View>
-      <Nomeando />
-      <Nomeando />
-
-      <TouchableOpacity>
-        <Text style={styles.ButtonTitulo}>Continuar</Text>
-      </TouchableOpacity>
-      <StatusBar style="light" />
-    </View>
-  );
+  return <StackRouter />
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 55,
     flex: 1,
-    backgroundColor: '#181313',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  ContainerTitulo: {
-
-  },
-  titulo: {
-    color: "#ffff",
-    fontSize: 25
-  },
-  ButtonTitulo: {
-    color: "#ffff",
-    fontSize: 25
   }
-
 });
