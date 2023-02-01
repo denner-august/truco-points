@@ -9,8 +9,9 @@ export function TelaPrincipal({ navigation }) {
             <View style={styles.ContainerTitulo}>
                 <Text style={styles.titulo}>Nome dos Jogadores</Text>
             </View>
-            <Nomeando />
-            <Nomeando />
+
+            <Nomeando id={1} />
+            <Nomeando id={2} />
 
             <TouchableOpacity onPress={() => navigation.navigate("Game")}>
                 <Text style={styles.ButtonTitulo}>Continuar</Text>
