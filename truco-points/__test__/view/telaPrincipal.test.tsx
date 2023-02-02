@@ -11,6 +11,6 @@ describe('<Nomeando />', () => {
         expect(findInputA.placeholder).toEqual("Jogador-A")
 
         const findInputB = component.root.findByProps({ testID: "Jogador-B" }).props;
-        expect(findInputB.placeholder).toEqual("Jogador-")
+        expect(findInputB.placeholder).toEqual("Jogador-B")
     })
 });
