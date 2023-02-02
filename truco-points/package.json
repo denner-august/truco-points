@@ -9,8 +9,10 @@
     "web": "expo start --web",
     "commit": "cz",
     "test": "jest",
-    "teste-watch":"jest --watch",
-    "teste-covarge":"jest --coverage=true"
+    "teste-watch": "jest --watch",
+    "teste-covarge": "jest --coverage=true",
+    "prepare": "cd .. && husky install front/.husky"
+
   },
   "jest": {
     "preset": "jest-expo",
@@ -37,6 +39,7 @@
     "@types/react-native": "~0.70.6",
     "@types/react-test-renderer": "^18.0.0",
     "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
     "typescript": "^4.6.3"
   },
   "private": true,
