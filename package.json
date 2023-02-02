@@ -11,7 +11,7 @@
     "test": "jest",
     "teste-watch": "jest --watch",
     "teste-covarge": "jest --coverage=true",
-    "prepare": "cd .. && husky install front/.husky"
+    "prepare": "husky install"
 
   },
   "jest": {
