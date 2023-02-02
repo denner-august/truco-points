@@ -4,7 +4,7 @@ import { View, StyleSheet, TextInput, Text } from "react-native";
 import { Context } from "../context/stateManager";
 
 interface NomeandoProps {
-    id: 1 | 2
+    id?: 1 | 2
 }
 
 export function Nomeando({ id }: NomeandoProps) {
@@ -25,11 +25,11 @@ export function Nomeando({ id }: NomeandoProps) {
     return (
         <View style={styles.Container}>
             <View>
-                <TextInput value={verificaDuplas.duplaA} onChangeText={(value) => MudaNomeVerificaDupla.duplaA(value)} style={styles.input} placeholder="Jogador-A" placeholderTextColor="#8d8c8c" />
+                <TextInput testID="Jogador-A" value={verificaDuplas.duplaA} onChangeText={(value) => MudaNomeVerificaDupla.duplaA(value)} style={styles.input} placeholder="Jogador-A" placeholderTextColor="#8d8c8c" />
             </View>
 
             <View>
-                <TextInput value={verificaDuplas.duplaB} onChangeText={(value) => MudaNomeVerificaDupla.duplaB(value)} style={styles.input}
+                <TextInput testID="Jogador-B" value={verificaDuplas.duplaB} onChangeText={(value) => MudaNomeVerificaDupla.duplaB(value)} style={styles.input}
                     placeholder="Jogador-B" placeholderTextColor="#8d8c8c" />
             </View>
         </View>
