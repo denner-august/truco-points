@@ -15,5 +15,13 @@ export interface ContextProps {
     setJogadorC: ((nome: string) => void);
     
     jogadorD: string
-    setJogadorD:((nome: string) => void);
+    setJogadorD: ((nome: string) => void);
+
+    placarTimeA:number
+    setPlacarTimeA:(numero:number) => void
+
+    placarTimeB:number,
+    setPlacarTimeB:(numero:number) => void
+    
+    verifyPlayers: ()=> boolean
 }
