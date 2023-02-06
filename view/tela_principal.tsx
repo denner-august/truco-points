@@ -1,8 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Nomeando } from '../components/nomeando';
+import { useContext } from 'react';
+import { Context } from '../context/stateManager';
 
 export function TelaPrincipal({ navigation }) {
+    const { verifyPlayers } = useContext(Context)
+
+    function verify() {
+        if (verifyPlayers() === true) {
+            return navigation.navigate("Game")
+        }
+
+        return Alert.alert('Digite o nome de todos os jogadores primeiro')
+    }
+
 
     return (
         <View style={styles.container}>
@@ -13,7 +25,7 @@ export function TelaPrincipal({ navigation }) {
             <Nomeando id={1} />
             <Nomeando id={2} />
 
-            <TouchableOpacity onPress={() => navigation.navigate("Game")}>
+            <TouchableOpacity onPress={verify}>
                 <Text style={styles.ButtonTitulo}>Continuar</Text>
             </TouchableOpacity>
             <StatusBar style="light" />
